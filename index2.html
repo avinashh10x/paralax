@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Website</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: #f9f9f9;
+            min-height: 100vh;
+            /* overflow-x: hidden; */
+        }
+
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 30px 100px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 2em;
+            color: #359381;
+            pointer-events: none;
+            margin-right: 420px;
+        }
+
+        .navigation a {
+            text-decoration: none;
+            color: #359381;
+            padding: 6px 15px;
+            border-radius: 20px;
+            margin: 0 10px;
+            font-weight: 600;
+        }
+
+        .navigation a:hover {
+            background: #359381;
+            color: #fff;
+        }
+
+        .parallax {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #text {
+            position: absolute;
+            font-size: 5rem;
+            height: 40px;
+            color: #359381;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+        }
+
+        .parallax img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            pointer-events: none;
+        }
+
+        .parallax img man {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 60%;
+            pointer-events: none;
+        }
+
+        .sec {
+            position: relative;
+            background: #003329;
+            padding: 100px;
+        }
+
+        .sec h2 {
+            font-size: 3em;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .sec p {
+            font-size: 1rem;
+            color: #fff;
+            font-weight: 300;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h2 class="logo">Logo </h2>
+        <nav class="navigation">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Service</a>
+            <a href="#">Contact </a>
+        </nav>
+    </header>
+    <section class="parallax">
+        <img src="./hill1.png" id="hill1">
+        <img src="./hill2.png" id="hill2">
+        <img src="./hill3.png" id="hill3">
+        <img src="./hill4.png" id="hill4">
+        <img src="./hill5.png" id="hill5">
+        <img src="./tree.png" id="tree">
+        <img src="./man.png" id="man">
+        <h2 id="text">Aman & Bully</h2>
+        <img src="./leaf.png" id="leaf">
+        <img src="./plant.png" id="plant">
+    </section>
+
+    <section class="sec">
+        <h2>Parallax Website Scrolling</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus dolore quibusdam culpa sed, sequi
+            commodi deserunt ipsam aspernatur tenetur ratione laboriosam animi mollitia fugiat in facilis laudantium,
+            eligendi non fuga dicta inventore rem? Iste, voluptatibus. Eveniet modi sapiente, exercitationem laborum in
+            beatae placeat aliquam eligendi voluptates excepturi quo laboriosam, possimus ipsam nihil dicta vel
+            inventore accusamus ad omnis. Quos consequuntur repellendus at ut eveniet architecto itaque tempora ex,
+            officia non maiores deserunt dicta quidem eaque nulla ea velit cumque voluptatem est praesentium ullam, iure
+            recusandae illum facere? Placeat deleniti a ut praesentium ullam quisquam perspiciatis? Voluptatibus ab,
+            labore adipisci nulla dolore sint nihil similique delectus maxime deserunt minus esse optio mollitia tenetur
+            corrupti alias magnam doloribus explicabo maiores exercitationem at soluta saepe! Similique excepturi dolor
+            debitis pariatur laudantium consectetur odit!<br><br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus dolore quibusdam culpa sed, sequi
+            commodi deserunt ipsam aspernatur tenetur ratione laboriosam animi mollitia fugiat in facilis laudantium,
+            eligendi non fuga dicta inventore rem? Iste, voluptatibus. Eveniet modi sapiente, exercitationem laborum in
+            beatae placeat aliquam eligendi voluptates excepturi quo laboriosam, possimus ipsam nihil dicta vel
+            inventore accusamus ad omnis. Quos consequuntur repellendus at ut eveniet architecto itaque tempora ex,
+            officia non maiores deserunt dicta quidem eaque nulla ea velit cumque voluptatem est praesentium ullam, iure
+            recusandae illum facere? Placeat deleniti a ut praesentium ullam quisquam perspiciatis? Voluptatibus ab,
+            labore adipisci nulla dolore sint nihil similique delectus maxime deserunt minus esse optio mollitia tenetur
+            corrupti alias magnam doloribus explicabo maiores exercitationem at soluta saepe! Similique excepturi dolor
+            debitis pariatur laudantium consectetur odit!<br><br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus dolore quibusdam culpa sed, sequi
+            commodi deserunt ipsam aspernatur tenetur ratione laboriosam animi mollitia fugiat in facilis laudantium,
+            eligendi non fuga dicta inventore rem? Iste, voluptatibus. Eveniet modi sapiente, exercitationem laborum in
+            beatae placeat aliquam eligendi voluptates excepturi quo laboriosam, possimus ipsam nihil dicta vel
+            inventore accusamus ad omnis. Quos consequuntur repellendus at ut eveniet architecto itaque tempora ex,
+            officia non maiores deserunt dicta quidem eaque nulla ea velit cumque voluptatem est praesentium ullam, iure
+            recusandae illum facere? Placeat deleniti a ut praesentium ullam quisquam perspiciatis? Voluptatibus ab,
+            labore adipisci nulla dolore sint nihil similique delectus maxime deserunt minus esse optio mollitia tenetur
+            corrupti alias magnam doloribus explicabo maiores exercitationem at soluta saepe! Similique excepturi dolor
+            debitis pariatur laudantium consectetur odit!<br><br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus dolore quibusdam culpa sed, sequi
+            commodi deserunt ipsam aspernatur tenetur ratione laboriosam animi mollitia fugiat in facilis laudantium,
+            eligendi non fuga dicta inventore rem? Iste, voluptatibus. Eveniet modi sapiente, exercitationem laborum in
+            beatae placeat aliquam eligendi voluptates excepturi quo laboriosam, possimus ipsam nihil dicta vel
+            inventore accusamus ad omnis. Quos consequuntur repellendus at ut eveniet architecto itaque tempora ex,
+            officia non maiores deserunt dicta quidem eaque nulla ea velit cumque voluptatem est praesentium ullam, iure
+            recusandae illum facere? Placeat deleniti a ut praesentium ullam quisquam perspiciatis? Voluptatibus ab,
+            labore adipisci nulla dolore sint nihil similique delectus maxime deserunt minus esse optio mollitia tenetur
+            corrupti alias magnam doloribus explicabo maiores exercitationem at soluta saepe! Similique excepturi dolor
+            debitis pariatur laudantium consectetur odit!<br><br>
+        </p>
+    </section>
+    <script>
+        let text = document.getElementById('text');
+        let leaf = document.getElementById('leaf');
+        let hill1 = document.getElementById('hill1');
+        let hill4 = document.getElementById('hill4');
+        let hill5 = document.getElementById('hill5');
+
+        window.addEventListener('scroll', () => {
+            let value = window.scrollY;
+
+            text.style.marginTop = value * 2.5 + 'px';
+            leaf.style.top = value * -1.5 + 'px';
+            leaf.style.left = value * 1.5 + 'px';
+            hill5.style.left = value * 1.5 + 'px';
+            hill4.style.left = value * -1.5 + 'px';
+            hill1.style.top = value * 1 + 'px';
+        })
+    </script>
+</body>
+
+</html>
