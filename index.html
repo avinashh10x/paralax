@@ -31,48 +31,115 @@
       position: absolute;
       bottom: 0;
       z-index: 5;
-      /* height: 60%; */
+      object-fit: cover;
+      height: 55vh;
       /* This will keep img1 at the bottom of the parent section */
+      /* display: none; */
     }
 
     .img2 {
-      position: sticky;
+      /* position: sticky;
       top: 0;
+      width: 100vw; */
+      display: none;
     }
 
     .img3 {
       /* width: 40%; */
-      position: absolute;
+      /* position: absolute;
       right: 0;
-      top: 0;
+      top: 0; */
+      display: none;
 
     }
 
     .img4 {
-      position: absolute;
       /* width: 50%; */
+      /* position: absolute;
       left: 0;
-      bottom: 25%;
+      bottom: 25%; */
+      display: none;
     }
 
-    .img5 {
+    .img6 {
+      width: 100vw;
       position: absolute;
+      height: 100vh;
+      object-fit: cover;
+    }
+
+
+    .img5 {
+      /* position: absolute;
+      display: none; */
       /* width: 50%; */
       /* left: 0; */
+      display: none;
+    }
+
+    .img7 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      scale: 1;
+      display: none;
     }
 
     .landingSection h1 {
       z-index: 4;
       position: absolute;
-      top: 50%;
+      top: 40%;
       left: 50%;
       transform: translate(-50%, -50%);
       font-size: 7rem;
+      text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.749);
     }
 
     .data {
       z-index: 50;
       background-color: black;
+    }
+
+    @media screen and (max-width: 768px) {
+
+      .img1 {
+        height: 50vh;
+        width: 100vw;
+        object-fit: cover;
+        display: block;
+      }
+
+      .img4 {
+        width: 50vh;
+        display: none;
+      }
+
+      .img2 {
+        /* scale: (10); */
+        display: none;
+      }
+
+      .img3,
+      .img7 {
+        display: none;
+      }
+
+      .img6 {
+        display: block;
+        width: 100vw;
+        position: absolute;
+        height: 100vh;
+        object-fit: cover;
+      }
+
+      .landingSection h1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 2rem;
+        transform: translate(-50%, -50%);
+        background-color: red;
+      }
     }
   </style>
 </head>
@@ -80,10 +147,12 @@
 <body>
   <div class="landingSection">
     <img class="img1" src="/img/base.png" alt="">
-    <img class="img2" src="/img/sky original.png" alt="">
+    <img class="img2" src="/img/sky2.png" alt="">
     <img class="img3" src="/img/right bushes.png" alt="">
     <img class="img4" src="/img/Untitled-1.png" alt="">
-    <!-- <img class="img5" src="/img/Firefly 20240329103753.png" alt=""> -->
+    <img class="img5" src="/img/Firefly 20240329103753.png" alt="">
+    <img class="img6" src="/img/img.png" alt="">
+    <img class="img7" src="/img/leaf.png" alt="">
     <h1>Aman&Bully</h1>
   </div>
   <div class="data">
@@ -160,52 +229,29 @@
   </div>
 
   <script>
+    let rightimg = document.querySelector('.img3');
+    let leftimg = document.querySelector('.img4');
+    let topimg = document.querySelector('.img2');
+    let baseimg = document.querySelector('.img1');
+    let title = document.querySelector('h1');
 
-    let rightimg = document.getElementsByClassName('img3')[0];
-    let leftimg = document.getElementsByClassName('img4')[0];
-    let topimg = document.getElementsByClassName('img2')[0];
-    let baseimg = document.getElementsByClassName('img1')[0];
-    let title = document.querySelector('h1')
-    document.addEventListener("scroll", (event) => {
-      var positionY = window.scrollY;
-
-      title.style.fontSize = `${100 + positionY * 0.35}px`;
-
-      // bg_2.style.right = `-${positionY * 0.2}px`;
-      // bg_3.style.left = `-${positionY * 0.15}px`;
-      // bg_3.style.scale = 1 + positionY * 0.001;
+    document.addEventListener("scroll", () => {
+      let positionY = window.scrollY;
 
       topimg.style.top = `-${positionY * 0.5}px`;
-      // rightimg.style.right = `-${positionY * 0.5}px`;
-      rightimg.style.top = `-${positionY * 0.15}px`;
-      // leftimg.style.left = `-${positionY * 0.5}px`;
-      // leftimg.style.bottom = `25% +${positionY * 0.45}px`;
+      rightimg.style.right = `-${positionY * 0.5}px`;
+      leftimg.style.left = `-${positionY * 0.5}px`;
       leftimg.style.bottom = `${25 + positionY * 0.01}%`;
+      baseimg.style.bottom = `${positionY * 0.15}px`;
 
-
-
-
-
-      image_card_1.style.transform = `translateY(${positionY * -0.5 + 400
-        }px)`;
-
-      image_card_2.style.transform = `translateY(${positionY * 0.1 + -50}px)`;
-
-      image_card_3.style.transform = `translateY(${positionY * -0.1 + 100
-        }px)`;
-
-      image_card_4.style.transform = `translateY(${positionY * 0.2 + -125
-        }px)`;
-
-      var _newOpacity = positionY * 0.001;
-      if (_newOpacity >= 0 && _newOpacity <= 1) {
-        image_card_1.style.opacity = _newOpacity;
-        image_card_2.style.opacity = _newOpacity;
-        image_card_3.style.opacity = _newOpacity;
-        image_card_4.style.opacity = _newOpacity;
+      if (window.innerWidth < 768) {
+        title.style.fontSize = `${100 + positionY * 0.35}px`;
+      } else {
+        title.style.fontSize = `${100 + positionY * 0.5}px`;
       }
     });
   </script>
+
 </body>
 
 
